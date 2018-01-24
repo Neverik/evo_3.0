@@ -504,6 +504,31 @@ public class Matrix {
 		}
 		return answer;
 	}
+	
+	//you dont know da wei
+   	public void Map(float sum, float mult)
+    	{
+        	for (int x = 0; x < self.Count; x++)
+        	{
+            		for (int y = 0; y < self[x].Count; y++)
+            		{
+                		self[x][y] *= mult;
+                		self[x][y] += sum;
+            		}
+        	}
+    	}
+
+    	//makes u troole no da wei
+   	public void Map(Func<float,float> f)
+    	{
+        	for (int x = 0; x < self.Count; x++)
+        	{
+            		for (int y = 0; y < self[x].Count; y++)
+            		{
+                		self[x][y] = f(self[x][y]);
+            		}
+        	}
+    	}
 
 	//sigmoid that matrix!!!
 	public void Sigmoid() {
